@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "RazorPages.protos";
+
+import "google/protobuf/empty.proto";
+package Category;
+
+service CategoryService {
+	rpc ListCategories (google.protobuf.Empty) returns (ListCategoriesResponse);
+	rpc CreateCategory (Category) returns (Category);
+	rpc UpdateCategory (Category) returns (Category);
+	rpc DeleteCategory (Category) returns (Category);
+}
+
+
+
+message ListCategoriesResponse {
+	repeated string Categories = 1;
+}
+
+message Category {
+	string NewTitle = 1;
+	string old_title = 2;
+}

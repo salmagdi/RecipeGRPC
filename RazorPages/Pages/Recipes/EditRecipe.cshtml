@@ -1,0 +1,24 @@
+﻿@page
+@model RazorPages.Pages.Recipes.EditRecipeModel
+@{
+}
+<div class="modal-content">
+    <form asp-page-handler="update" method="post">
+        <div class="modal-header">
+            <h5 class="modal-title" id="addModalLabel">Edit @Model.OldCategory</h5>
+        </div>
+       <div class="modal-body c-edit-modal-body">
+            <div class="my-3 row">
+                 <label asp-for="@Model.NewCategory" class="mb-2"> Enter new category name</label>
+                 <input asp-for="@Model.NewCategory" type="text" id="categoryName" class="form-control" value="" required />
+            </div>
+       </div>
+       <div class="modal-footer c-modal-footer">
+           <a class="btn c-cancel-button"asp-page="List">Cancel</a>
+            <button type="submit" class="btn c-confirm-button" asp-page="List">Confirm</button>
+        </div>
+ </form>>
+</div>
+ 
+ 
+ 

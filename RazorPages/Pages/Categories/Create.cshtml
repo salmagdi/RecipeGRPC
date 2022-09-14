@@ -1,0 +1,19 @@
+﻿@page
+@model RazorPages.Pages.Categories.CreateModel
+@{
+}
+ <div class="modal-header">
+   <h5 class="modal-title" id="addModalLabel">Add new category</h5>
+ </div>
+ <form asp-page-handler="add" method="post">
+       <div class="modal-body c-edit-modal-body">
+            <div class="form-group">
+                 <label asp-for="@Model.AddedCategory" class="mb-2"> Enter new category name</label>
+                 <input asp-for="@Model.AddedCategory" type="text" id="categoryName" class="form-control" value="" required />
+            </div>
+       </div>
+       <div class="modal-footer c-modal-footer">
+             <a class="btn c-cancel-button" asp-page="List">Cancel</a>
+            <button type="submit" class="btn c-confirm-button" asp-page="ListCategory">Confirm</button>
+        </div>
+ </form>>
